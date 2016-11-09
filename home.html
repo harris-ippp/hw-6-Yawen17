@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Shark Attacks :: A Map Story</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,500,400,300,200,100,400italic0&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'>
+
+<style>
+* { font-family: 'Open Adobe', Adobe Garamond Pro; }
+body {margin: 0% 10%;}
+ul.nav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;
+  background-color: #6BCAE2;
+}
+ul.nav li { float: left; }
+ul.nav li a {
+  display: inline-block;
+  color: #F5FAFA;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+ul.nav li a.active {
+  color: #FEF9E7;
+  background-color: #C1DAD6;
+  font-weight: bold;
+}
+ul.nav li:hover {
+  background-color: #6D929B;
+  transition: 0.5s;
+}
+img {
+  border: 0px;
+  border-style: solid;
+  border-color: #6BCAE2;
+  margin: 0px 0px;
+}
+figcaption {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
+table {
+  align: center;
+  border-width: 5px 0px;
+  border-style: solid;
+  border-color: #6BCAE2;
+  background: #B7AFA3;
+  padding: 0px;
+  border-spacing: 0px;
+}
+th {
+  color: white;
+  background-color: #6BCAE2;
+}
+th, td {
+  text-align: left;
+  padding: 3px 15px;
+}
+h1 {
+  color: #6BCAE2;
+  background: #;
+}
+</style>
+</head>
+<body>
+
+<ul class="nav">
+  <li><a href="#intro" class="active">Shark Attacks Intro</a></li>
+  <li><a href="#map">Shark Attack Map</a></li>
+  <li><a href="#list">List of "Shark Paradise"</a></li>
+  <li><a href="#news">Breaking News</a></li>
+</ul>
+
+<div id="intro">
+<h1>Introduction to Shark Attacks</h1>
+<p>
+Contrary to what Hollywood would have us believe, experts insist that sharks do not actively seek out
+humans as prey. In fact, you're 75 times more likely to get killed by a lightning strike than a shark attack,
+according to the Florida Museum of Natural History. Yet, a number of surfers and swimmers have serious
+brushes with sharks on global beaches every year, and some come away from the skirmishes with fewer limbs
+than they had before.
+<p>
+Most of the incidents in the Global Shark Attack File have nothing to do with predation on humans.
+Some accidents are motivated by a displacement or territorial behavior when a shark feels threatened;
+still others are the result of the shark responding to sensory predatory input (i.e., overwhelmed by the
+presence of many fishes) and environmental conditions (murky water), which may cause them to respond in a
+reflexive response to stimuli. Sharks also exhibit curiosity and may investigate unknown or unfamiliar objects;
+they learn by exploring their environment, and - lacking hands - they use their mouths and teeth to examine
+unfamiliar objects.
+<p>
+
+<div id="map">
+<h1>Shark Attack Map</h1>
+<p>
+
+This map was made with Plot.ly (python) for the "Data Visualization" course, taught by <a href=https://www.linkedin.com/in/kevinhartman1>Prof. Kevin Hartman</a>.
+<p>
+Based on the shark attack data from 1800-2016, I tried to give some insights regarding the location of the shark attacks.
+
+<p>
+<figure>
+<img src="Figures/shark_attacks.png" alt="Map" width="100%" align="center">
+<figcaption>Figure 1. Shark attacks Bubbule in the U.S.(1800-2016)</figcaption>
+</figure>
+
+<p>
+It was found that beaches in Florida are the most dangerous in terms shark attacks.
+Among all the shark attacks in the U.S., 50% of them happened in Florida, where 52% were in Volucia and Brevard Counties
+
+<p>
+<figure>
+<img src="Figures/shark_attacks_florida.png" alt="Map_Florida" width="60%" align="center">
+<figcaption>Figure 2. Shark attacks in Florida, by county (1800-2016)</figcaption>
+</figure>
+<p>
+<p>
+
+Here are the steps I took in making this interactive map:
+<p>
+<ol>
+  <li>Download data and convert it to CSV;</li>
+  <li>clean data with Python (count number of attacks by county);</li>
+  <li>Utilize <a href=https://pypi.python.org/pypi/geopy/1.11.0>Python Geopy</a> to pin the county locations.</li>
+  <li>Plot by <a href=https://plot.ly>Plot.ly</a>.</li>
+</ol>
+<p>
+
+<div id="list">
+<h1>The List of "Shark Paradise" </h1>
+
+Here is the list of shark attacks ranked by county, data cleaned with Python:
+
+<p>
+<table>
+<tr><th>County</th>  <th>Attacks</th></tr>
+<tr><td>VOLUSIA COUNTY, FLORIDA</td>  <td>107</td></tr>
+<tr><td>BREVARD COUNTY, FLORIDA</td>  <td>25</td></tr>
+<tr><td>OAHU, HAWAII</td>  <td>18</td></tr>
+<tr><td>PALM BEACH COUNTY, FLORIDA</td>  <td>16</td></tr>
+<tr><td>MAUI, HAWAII</td>  <td>15</td></tr>
+<tr><td>ST. JOHN'S COUNTY, FLORIDA</td>  <td>14</td></tr>
+<tr><td>MONROE COUNTY, FLORIDA</td>  <td>14</td></tr>
+<tr><td>HORRY COUNTY, SOUTH CAROLINA</td>  <td>14</td></tr>
+<tr><td>CHARLESTON COUNTY, SOUTH CAROLINA</td>  <td>14</td></tr>
+<tr><td>LOS ANGELES COUNTY, CALIFORNIA</td>  <td>13</td></tr>
+<tr><td>DUVAL COUNTY, FLORIDA</td>  <td>12</td></tr>
+<tr><td>SAN DIEGO COUNTY, CALIFORNIA</td>  <td>11</td></tr>
+<tr><td>NEW SMYRNA BEACH, FLORIDA</td>  <td>11</td></tr>
+<tr><td>MARTIN COUNTY, FLORIDA</td>  <td>11</td></tr>
+<tr><td>ST. LUCIE COUNTY, FLORIDA</td>  <td>7</td></tr>
+<tr><td>SAN LUIS OBISPO COUNTY, CALIFORNIA</td>  <td>7</td></tr>
+<tr><td>KAUAI, HAWAII</td>  <td>7</td></tr>
+<tr><td>SANTA BARBARA COUNTY, CALIFORNIA</td>  <td>6</td></tr>
+<tr><td>INDIAN RIVER COUNTY, FLORIDA</td>  <td>6</td></tr>
+<tr><td>ESCAMBIA COUNTY, FLORIDA</td>  <td>6</td></tr>
+<tr><td>BROWARD COUNTY, FLORIDA</td>  <td>6</td></tr>
+<tr><td>SAN FRANCISCO, CALIFORNIA</td>  <td>5</td></tr>
+<tr><td>NEW HANOVER COUNTY, NORTH CAROLINA</td>  <td>5</td></tr>
+<tr><td>HUMBOLDT COUNTY, CALIFORNIA</td>  <td>5</td></tr>
+<tr><td>GALVESTON, TEXAS</td>  <td>5</td></tr>
+<tr><td>FLAGLER COUNTY, FLORIDA</td>  <td>5</td></tr>
+<tr><td>SONOMA COUNTY, CALIFORNIA</td>  <td>4</td></tr>
+<tr><td>RIVIERA BEACH, FLORIDA</td>  <td>4</td></tr>
+<tr><td>MONMOUTH COUNTY, NEW JERSEY</td>  <td>4</td></tr>
+<tr><td>MARIN COUNTY, CALIFORNIA</td>  <td>4</td></tr>
+<tr><td>JUPITER, FLORIDA</td>  <td>4</td></tr>
+<tr><td>HUTCHINSON ISLAND, FLORIDA</td>  <td>4</td></tr>
+<tr><td>BRUNSWICK COUNTY, NORTH CAROLINA</td>  <td>4</td></tr>
+<tr><td>BAY COUNTY, FLORIDA</td>  <td>4</td></tr>
+<tr><td>ST. AUGUSTINE, FLORIDA</td>  <td>3</td></tr>
+<tr><td>SOUTH PADRE ISLAND, TEXAS</td>  <td>3</td></tr>
+<tr><td>SINGER ISLAND, FLORIDA</td>  <td>3</td></tr>
+<tr><td>SAN MATEO COUNTY, CALIFORNIA</td>  <td>3</td></tr>
+<tr><td>PENDER COUNTY, NORTH CAROLINA</td>  <td>3</td></tr>
+<tr><td>NUECES COUNTY, TEXAS</td>  <td>3</td></tr>
+<tr><td>NORTHWESTERN HAWAIIAN ISLANDS, HAWAII</td>  <td>3</td></tr>
+<tr><td>NASSAU COUNTY, FLORIDA</td>  <td>3</td></tr>
+<tr><td>MONTEREY COUNTY, CALIFORNIA</td>  <td>3</td></tr>
+<tr><td>MOLOKA'I, HAWAII</td>  <td>3</td></tr>
+<tr><td>MIAMI-DADE COUNTY, FLORIDA</td>  <td>3</td></tr>
+<tr><td>LEE COUNTY, FLORIDA</td>  <td>3</td></tr>
+<tr><td>KAU DISTRICT, HAWAII</td>  <td>3</td></tr>
+<tr><td>HONOLULU, HAWAII</td>  <td>3</td></tr>
+<tr><td>HIGHLANDS, NEW JERSEY</td>  <td>3</td></tr>
+<tr><td>HAWAI'I, HAWAII</td>  <td>3</td></tr>
+<tr><td>GULF COUNTY, FLORIDA</td>  <td>3</td></tr>
+<tr><td>GEORGETOWN COUNTY, SOUTH CAROLINA</td>  <td>3</td></tr>
+<tr><td>DARE COUNTY, NORTH CAROLINA</td>  <td>3</td></tr>
+<tr><td>CARTERET COUNTY, NORTH CAROLINA</td>  <td>3</td></tr>
+<tr><td>CALHOUN COUNTY, TEXAS</td>  <td>3</td></tr>
+<tr><td>BARBERS POINT, HAWAII</td>  <td>3</td></tr>
+<tr><td>BALDWIN COUNTY, ALABAMA</td>  <td>3</td></tr>
+<tr><td>WEST PALM BEACH, FLORIDA</td>  <td>2</td></tr>
+<tr><td>WEST OF MALIBU, CALIFORNIA</td>  <td>2</td></tr>
+<tr><td>VIRGINIA BEACH, VIRGINIA</td>  <td>2</td></tr>
+<tr><td>SUSSEX COUNTY, DELAWARE</td>  <td>2</td></tr>
+<tr><td>SIESTA KEY, FLORIDA</td>  <td>2</td></tr>
+<tr><td>SEABROOK BEACH, SOUTH CAROLINA</td>  <td>2</td></tr>
+<tr><td>SARASOTA COUNTY, FLORIDA</td>  <td>2</td></tr>
+<tr><td>SAN JUAN, PUERTO RICO</td>  <td>2</td></tr>
+<tr><td>PRINCESS ANNE COUNTY, VIRGINIA</td>  <td>2</td></tr>
+<tr><td>PINELLAS COUNTY, FLORIDA</td>  <td>2</td></tr>
+<tr><td>ONSLOW COUNTY, NORTH CAROLINA</td>  <td>2</td></tr>
+<tr><td>OCEAN COUNTY, NEW JERSEY</td>  <td>2</td></tr>
+<tr><td>OCEAN CITY (OFFSHORE), NEW JERSEY</td>  <td>2</td></tr>
+<tr><td>NEW ORLEANS, LOUISIANA</td>  <td>2</td></tr>
+<tr><td>NEAR PORT ARANSAS, TEXAS</td>  <td>2</td></tr>
+<tr><td>NEAR CHARLESTON, SOUTH CAROLINA</td>  <td>2</td></tr>
+<tr><td>MANATEE COUNTY, FLORIDA</td>  <td>2</td></tr>
+<tr><td>HOLDEN BEACH. BRUNSWICK COUNTY, NORTH CAROLINA</td>  <td>2</td></tr>
+<tr><td>HILLSBOROUGH COUNTY, FLORIDA</td>  <td>2</td></tr>
+<tr><td>HATTERAS ISLAND, NORTH CAROLINA</td>  <td>2</td></tr>
+<tr><td>FLORIDA STRAITS, FLORIDA</td>  <td>2</td></tr>
+<tr><td>FLORIDA KEYS, FLORIDA</td>  <td>2</td></tr>
+<tr><td>FARALLON ISLANDS, CALIFORNIA</td>  <td>2</td></tr>
+<tr><td>DELRAY BEACH, FLORIDA</td>  <td>2</td></tr>
+<tr><td>COCOA BEACH, FLORIDA</td>  <td>2</td></tr>
+<tr><td>CAPE KIWANDA, OREGON</td>  <td>2</td></tr>
+<tr><td>CANAVERAL NATIONAL SEASHORE, FLORIDA</td>  <td>2</td></tr>
+<tr><td>ATLANTIC COUNTY, NEW JERSEY</td>  <td>2</td></tr>
+<tr><td>ARANSAS COUNTY, TEXAS</td>  <td>2</td></tr>
+<tr><td>10 MILES FROM THE SEA, NEW JERSEY</td>  <td>2</td></tr>
+<tr><td>WINDY HILL BEACH, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>WILMINGTON, NORTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>WASHINGTON COUNTY, MAINE</td>  <td>1</td></tr>
+<tr><td>WAKULLA COUNTY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>WAIKIKI, HAWAII</td>  <td>1</td></tr>
+<tr><td>VIEQUES, PUERTO RICO</td>  <td>1</td></tr>
+<tr><td>VENTURA COUNTY, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>VELASCO, TEXAS</td>  <td>1</td></tr>
+<tr><td>VANDENBERG AFB, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>TRURO, MASSACHUSETTS</td>  <td>1</td></tr>
+<tr><td>TOPSAIL ISLAND, NORTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>TILLAMOOK COUNTY, OREGON</td>  <td>1</td></tr>
+<tr><td>TAMPA BAY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>SURF CITY, NORTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>STUART, FLORIDA</td>  <td>1</td></tr>
+<tr><td>ST. PETERSBURG, FLORIDA</td>  <td>1</td></tr>
+<tr><td>ST. LOUIS, MISSOURI</td>  <td>1</td></tr>
+<tr><td>SOUTHERN WHARF, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>SOUTH SIDE OF OAHU ISLAND, HAWAII</td>  <td>1</td></tr>
+<tr><td>SOUTH OF MYRTLE BEACH, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>SATELLITE BEACH, FLORIDA</td>  <td>1</td></tr>
+<tr><td>SANTA MONICA, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>SANTA CRUZ COUNTY, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>SAN ONOFRE, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>SAN CLEMENTE, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>ROCKPORT, TEXAS</td>  <td>1</td></tr>
+<tr><td>ROCKAWAY BEACH, NEW YORK</td>  <td>1</td></tr>
+<tr><td>RAMSHORN CREEK, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>PUNA, HAWAII</td>  <td>1</td></tr>
+<tr><td>PRINCEVILLE, HAWAII</td>  <td>1</td></tr>
+<tr><td>PRINCE WILLIAM SOUND, ALASKA</td>  <td>1</td></tr>
+<tr><td>PONCE INLET, FLORIDA</td>  <td>1</td></tr>
+<tr><td>PO'IPU, HAWAII</td>  <td>1</td></tr>
+<tr><td>PLANTATION KEY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>PHILADELPHIA, PENNSYLVANIA</td>  <td>1</td></tr>
+<tr><td>PAPAIKOU PLANTATION, HAWAII</td>  <td>1</td></tr>
+<tr><td>PAMLICO SOUND, NORTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>OSWALD STATE PARK, OREGON</td>  <td>1</td></tr>
+<tr><td>ON ONE OF THE SOUNDS NEAR WILMINGTON, NORTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>OFF THE BATTERY, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>OFF SURFSIDE, TEXAS</td>  <td>1</td></tr>
+<tr><td>OFF SULLIVANS ISLAND, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>OFF SHORE, NEW JERSEY</td>  <td>1</td></tr>
+<tr><td>OFF PANAMA CITY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>OFF NJ CLAY COMPANY BRICKYARDS AT CLIFFWOOD, NEW JERSEY</td>  <td>1</td></tr>
+<tr><td>OFF KAUA'I, HAWAII</td>  <td>1</td></tr>
+<tr><td>OFF FLORIDA COAST, FLORIDA</td>  <td>1</td></tr>
+<tr><td>NORTH SHORE OF OAHU, HAWAII</td>  <td>1</td></tr>
+<tr><td>NORTH OF CHARLESTON, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>NORTH KOHALA, HAWAII</td>  <td>1</td></tr>
+<tr><td>NORTH COAST, PUERTO RICO</td>  <td>1</td></tr>
+<tr><td>NORFOLK, VIRGINIA</td>  <td>1</td></tr>
+<tr><td>NEWPORT, KENTUCKY</td>  <td>1</td></tr>
+<tr><td>NEWPORT, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>NEW HAVEN COUNTY, CONNECTICUT</td>  <td>1</td></tr>
+<tr><td>NEAR MYRTLE BEACH, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>NEAR KEY WEST, FLORIDA</td>  <td>1</td></tr>
+<tr><td>NEAR AIR STATION BOAT DOCKS, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>NEAR A SMALL WRECK IN A CHANNEL AT INDIAN KEY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>NAPLES, FLORIDA</td>  <td>1</td></tr>
+<tr><td>NAHANT, MASSACHUSETTS</td>  <td>1</td></tr>
+<tr><td>MYSTIC RIVER, CONNECTICUT</td>  <td>1</td></tr>
+<tr><td>MYRTLE BEACH, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>MORRO BAY, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>MONTECITO, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>MONTAUK, NEW YORK</td>  <td>1</td></tr>
+<tr><td>MOBILE BAY, ALABAMA</td>  <td>1</td></tr>
+<tr><td>MIAMI, FLORIDA</td>  <td>1</td></tr>
+<tr><td>MATAGORDA ISLAND, TEXAS</td>  <td>1</td></tr>
+<tr><td>MATAGORDA BEACH, TEXAS</td>  <td>1</td></tr>
+<tr><td>MARYLAND, MARYLAND</td>  <td>1</td></tr>
+<tr><td>MARQUES ISLAND, FLORIDA</td>  <td>1</td></tr>
+<tr><td>MARCO ISLAND, FLORIDA</td>  <td>1</td></tr>
+<tr><td>MALIBU, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>MAKENA, HAWAII</td>  <td>1</td></tr>
+<tr><td>LOWER DELAWARE BAY, NEW JERSEY</td>  <td>1</td></tr>
+<tr><td>LANE COUNTY, OREGON</td>  <td>1</td></tr>
+<tr><td>LAJOLLA, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>KIHEI, HAWAII</td>  <td>1</td></tr>
+<tr><td>KEY WEST AQUARIUM, FLORIDA</td>  <td>1</td></tr>
+<tr><td>KEKAHA, HAWAII</td>  <td>1</td></tr>
+<tr><td>KAWAHAE, HAWAII</td>  <td>1</td></tr>
+<tr><td>KAILUA, HAWAII</td>  <td>1</td></tr>
+<tr><td>KAANAPALI SHORES, HAWAII</td>  <td>1</td></tr>
+<tr><td>JUNO BEACH, FLORIDA</td>  <td>1</td></tr>
+<tr><td>JACKSONVILLE, FLORIDA</td>  <td>1</td></tr>
+<tr><td>ISLE OF PALMS, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>IN GULF OF MEXICO 17 MILES OFF WEEKI WACHEE, FLORIDA</td>  <td>1</td></tr>
+<tr><td>HUNTING ISLAND STATE PARK, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>HUGUENOT PARK, FLORIDA</td>  <td>1</td></tr>
+<tr><td>HONOMU, HAWAII</td>  <td>1</td></tr>
+<tr><td>HONOKOWAI, HAWAII</td>  <td>1</td></tr>
+<tr><td>HILTON HEAD ISLAND, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>HILO, HAWAII</td>  <td>1</td></tr>
+<tr><td>HAULOVER INLET, FLORIDA</td>  <td>1</td></tr>
+<tr><td>HANCOCK COUNTY, MISSISSIPPI</td>  <td>1</td></tr>
+<tr><td>HALF MOON BAY, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>FRYING PAN SHOALS, NORTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>FRIPP ISLAND, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>FRANKLIN COUNTY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>FORT PIERCE, FLORIDA</td>  <td>1</td></tr>
+<tr><td>FORT LAUDERDALE, FLORIDA</td>  <td>1</td></tr>
+<tr><td>FENWICK ISLAND, DELAWARE</td>  <td>1</td></tr>
+<tr><td>ESSEC COUNTY, MASSACHUSETTS</td>  <td>1</td></tr>
+<tr><td>DOUGLAS COUNTY, OREGON</td>  <td>1</td></tr>
+<tr><td>DISNEY WATER PARK, FLORIDA</td>  <td>1</td></tr>
+<tr><td>DELAWARE LIGHTSHIP, DELAWARE</td>  <td>1</td></tr>
+<tr><td>DELAWARE BAY, DELAWARE</td>  <td>1</td></tr>
+<tr><td>DAYTONA BEACH SHORES, FLORIDA</td>  <td>1</td></tr>
+<tr><td>DAVENPORT COUNTY, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>DAUPHIN ISLAND, ALABAMA</td>  <td>1</td></tr>
+<tr><td>DAMISCOTTE, </td>  <td>1</td></tr>
+<tr><td>DADE COUNTY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>CUMBERLAND ISLAND, GEORGIA</td>  <td>1</td></tr>
+<tr><td>COLLETON COUNTY, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>CHICAGO (LAKE MICHIGAN), ILLINOIS</td>  <td>1</td></tr>
+<tr><td>CHERRY GROVE, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>CAROLINA BEACH, NORTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>CARMEL RIVER STATE PARK, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>CANE BAY, US VIRGIN ISLANDS</td>  <td>1</td></tr>
+<tr><td>CAMERON COUNTY, TEXAS</td>  <td>1</td></tr>
+<tr><td>BROOKLYN, NEW YORK</td>  <td>1</td></tr>
+<tr><td>BRISTOL HARBOR, RHODE ISLAND</td>  <td>1</td></tr>
+<tr><td>BRENNECKE BEACH, HAWAII</td>  <td>1</td></tr>
+<tr><td>BRAZOS, TEXAS</td>  <td>1</td></tr>
+<tr><td>BOYTON BEACH, FLORIDA</td>  <td>1</td></tr>
+<tr><td>BISCAYNE BAY, FLORIDA</td>  <td>1</td></tr>
+<tr><td>BETWEEN SANTA CRUZ ISLAND AND SANTA BARBARA, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>BETHUNE BEACH, FLORIDA</td>  <td>1</td></tr>
+<tr><td>BEAUFORT COUNTY, SOUTH CAROLINA</td>  <td>1</td></tr>
+<tr><td>BALTIMORE AQUARIUM, MARYLAND</td>  <td>1</td></tr>
+<tr><td>AMELIA ISLAND, FLORIDA</td>  <td>1</td></tr>
+<tr><td>A QUARTER MILE NORTH OF FORT PIERCE INLET, FLORIDA</td>  <td>1</td></tr>
+<tr><td>A MILE NORTH OF SEBASTIAN INLET, FLORIDA</td>  <td>1</td></tr>
+<tr><td>70 MILES OFF TARPON SPRINGS, FLORIDA</td>  <td>1</td></tr>
+<tr><td>6 MILES SSE OF CHICOTEAGUE INLET, VIRGINIA</td>  <td>1</td></tr>
+<tr><td>5 NM FROM GAVIOTA, CALIFORNIA</td>  <td>1</td></tr>
+<tr><td>22 MILES SE OF RUDEE, VIRGINIA</td>  <td>1</td></tr>
+<tr><td>100 MILES OFF FT. MYERS BEACH, FLORIDA</td>  <td>1</td></tr>
+</table>
+
+
+<p>
+
+Data source:
+<a href=http://www.sharkattackfile.net>Global Shark Attack File</a>.
+
+<div id="news">
+<h1>Breaking News</h1>
+<p>
+Although the overall number of reported shark attacks around the world has gone up,
+a person individual risk of being bitten by a shark has plummeted, according to a new study.
+
+<p>
+<img src="http://news.nationalgeographic.com/content/dam/news/2015/07/08/sharkattackpew.adapt.1900.1.jpg" alt="Pic of a Shark" width="50%" align="left">
+<br clear="all"/>
+
+<p>
+
+In June 2016, a 60-year-old woman diving at a popular spot in Perth, Australia,
+was attacked and killed by a large shark. Her friend noticed commotion in the
+water but by the time he pulled her out to safety it was too late. Her wounds proved fatal.
+Nearby fishermen said the shark was larger than their 17-foot boat.
+<p>
+
+<img src="http://i.telegraph.co.uk/multimedia/archive/01778/sharkattack_1778841b.jpg" alt="Pic of a Shark" width="50%" align="left">
+<br clear="all"/>
+<p>
+
+In May 2016, 29-year-old Ben Gerring was surfing near Perth, Australia,
+when his leg was bitten off by a great white shark. He died of his injuries later that week. Local officials caught and killed a 15-foot shark soon after, but weren't sure if it was the same one that attacked Gerring.
+Swimmers were warned to steer clear of the area.
+<p>
+
+</body>
+</html>
