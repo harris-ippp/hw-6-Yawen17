@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+### We meant for you to encapsulate it in a function that takes an argument with the
+### county, but you made it into a standalone script that takes a parameter from the
+### command line. Great job!!!
+
 import os
 import sys
 import glob
